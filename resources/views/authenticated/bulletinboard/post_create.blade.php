@@ -9,7 +9,7 @@
         @foreach($main_categories as $main_category)
         <optgroup label="{{ $main_category->main_category }}"></optgroup>
         <!-- サブカテゴリー表示 -->
-        </optgroup>
+        <optgroup label="{{ $sub_category->sub_category }}"></optgroup>
         @endforeach
       </select>
     </div>
@@ -37,11 +37,11 @@
     <div class="category_area mt-5 p-5">
       @if ( Auth::user()->role == '1' ||Auth::user()->role == '2' ||Auth::user()->role == '3')
       <div class="">
-        @if($errors->first('main_category'))
-       <span class="error_message">{{ $errors->first('main_category') }}</span>
+        @if($errors->first('main_category_name'))
+       <span class="error_message">{{ $errors->first('main_category_name') }}</span>
        @endif
         <p class="m-0">メインカテゴリー</p>
-        <input type="text" class="w-100" name="main_category" form="mainCategoryRequest">
+        <input type="text" class="w-100" name="main_category_name" form="mainCategoryRequest">
         <input type="submit" value="追加" class="w-100 btn btn-primary p-0" form="mainCategoryRequest">
       </div>
       <!-- サブカテゴリー追加 -->
