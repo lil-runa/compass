@@ -35,7 +35,6 @@
   @can('admin')
   <div class="w-25 ml-auto mr-auto">
     <div class="category_area mt-5 p-5">
-      @if ( Auth::user()->role == '1' ||Auth::user()->role == '2' ||Auth::user()->role == '3')
       <div class="">
         @if($errors->first('main_category_name'))
        <span class="error_message">{{ $errors->first('main_category_name') }}</span>
@@ -47,10 +46,7 @@
       <!-- サブカテゴリー追加 -->
       <div class="">
         <p class="m-0">サブカテゴリー</p>
-        <input type="text" class="w-100" name="sub_category_name" form="subCategoryRequest">
-        <input type="submit" value="追加" class="w-100 btn btn-primary p-0" form="mainCategoryRequest">
       </div>
-      @endif
       <form action="{{ route('main.category.create') }}" method="post" id="mainCategoryRequest">{{ csrf_field() }}</form>
     </div>
   </div>
