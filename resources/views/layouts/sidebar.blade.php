@@ -19,7 +19,7 @@
   <div class="d-flex">
     <div class="sidebar">
       @section('sidebar')
-      <p><a href="{{ route('top.show') }}">トップ</a></p>
+      <p><a href="{{ route('top.show') }}"><img src="{{asset('/images/home-icon.png')}}" class=>トップ</a></p>
       <p><a href="/logout">ログアウト</a></p>
       <p><a href="{{ route('calendar.general.show',['user_id' => Auth::id()]) }}">スクール予約</a></p>
       @if ( Auth::user()->role == '1' ||Auth::user()->role == '2' ||Auth::user()->role == '3')
@@ -27,7 +27,7 @@
       <p><a href="{{ route('calendar.admin.setting',['user_id' => Auth::id()]) }}">スクール枠登録</a></p>
       @endif
       <p><a href="{{ route('post.show') }}">掲示板</a></p>
-      <p><a href="{{ route('user.show') }}">ユーザー検索</a></p>
+      <p><a href="{{ route('user.show') }}"><img src="{{asset('/images/友達検索アイコン.png')}}" class=>ユーザー検索</a></p>
       @show
     </div>
     <div class="main-container">
