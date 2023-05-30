@@ -285,31 +285,58 @@ li {
   margin: 0% 15% 0% 0%;
 }
 
+.main_categories {
+  margin: 0% 20% 0% 0%;
+  border-bottom: solid 1px #999;
+}
+
 .main_categories:after {
   content: "";
-  position: absolute;
-  right: 120px;
-  top: 207px;
   transition: all 0.2s ease-in-out;
-  display: block;
+  display: inline-block;
   width: 8px;
   height: 8px;
   border-top: solid 2px #494949;
   border-right: solid 2px #494949;
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
+  margin: 0% 0% 1% 2%;
 }
 
 .main_categories.open:after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 308px;
 }
 
 .categories_inner {
   display: none;
 }
 
+.category_like {
+  width: 39%;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: none;
+  background: #FF99CC;
+  color: #FFF;
+  margin: 15px 5px 5px 0px;
+}
+
+.category_post {
+  width: 39%;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: none;
+  background: #FFCC66;
+  color: #FFF;
+  margin: 15px 5px 5px 0px;
+}
+
+.search-category {
+  margin: 5% 0% 5% 0%;
+}
 
 /* 掲示板 詳細画面 */
 .contributor {
@@ -398,6 +425,16 @@ li {
   cursor: pointer;
 }
 
+.sub_category_btn {
+  margin: 3% 0% 0% 5%;
+  display: block;
+  background-color: #ECF1F6;
+  border: none;
+  border-bottom: solid 1px #999;
+  width: 50%;
+  text-align: left;
+}
+
 /* ユーザー検索 */
 .searchTitle {
   font-size: 1.2rem;
@@ -471,31 +508,29 @@ li {
   display: inline-block
 }
 
-.search_conditions span {
-  color: 006699;
+.search_conditions {
+  color: #006699;
   cursor: pointer;
-  margin: 8% 10%;
+  margin: 4% 15% 2% 10%;
+  border-bottom: solid 1px #999;
 }
 
 .search_conditions:after {
   content: "";
-  position: absolute;
-  right: 120px;
-  top: 307px;
   transition: all 0.2s ease-in-out;
-  display: block;
+  display: inline-block;
   width: 8px;
   height: 8px;
   border-top: solid 2px #494949;
   border-right: solid 2px #494949;
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
+  margin: 0% 2% 1% 5%;
 }
 
 .search_conditions.open:after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 308px;
 }
 
 .search_conditions_inner {
