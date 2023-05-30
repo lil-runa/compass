@@ -8,9 +8,9 @@
           <div>
           </div>
           @if ( $post->user_id == Auth::id())
-          <div>
+          <div class="edit-btn">
             <span class="edit-modal-open" post_title="{{ $post->post_title }}" post_body="{{ $post->post }}" post_id="{{ $post->id }}">編集</span>
-            <a href="{{ route('post.delete', ['id' => $post->id]) }}" onclick="return confirm('投稿を削除しますか？')">削除</a>
+            <a class="edit-delete" href="{{ route('post.delete', ['id' => $post->id]) }}" onclick="return confirm('投稿を削除しますか？')">削除</a>
           </div>
           @endif
         </div>

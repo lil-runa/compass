@@ -16,12 +16,39 @@ li {
   list-style: none;
 }
 
+/* login */
+.atlas-icon {
+  margin: 10% 0% 3% 40%;
+}
+
+.login {
+  background-color: #ECF1F6;
+  margin: 0;
+}
+
+.loginBox {
+  background-color: #fff;
+  margin-bottom: 30%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+}
+
 /* サイドバー */
 .sidebar {
   width: 150px;
   height: 100vh;
   background-color: #03AAD2;
   font-weight: bold;
+}
+
+.side-menu {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.side-icon {
+  width: 21px;
+  margin-bottom: 5px;
 }
 
 .main-container {
@@ -51,8 +78,16 @@ li {
   color: #FF0000;
 }
 
+.day {
+  margin: 0;
+}
+
 .past-day {
-  background: #ccc;
+  background: #eeeeee;
+}
+
+.calendar {
+  background-color: #fff;
 }
 
 .calendar-td {
@@ -62,6 +97,15 @@ li {
 .day_part {
   color: #494949;
   font-size: 12px;
+  display: flex;
+}
+
+.day_part_text {
+  margin: 0px 30px 0px 20px;
+}
+
+.day_part_count {
+  display: flex;
 }
 
 .adjust-table {
@@ -78,6 +122,32 @@ li {
 
 .adjust-table-btn {
   width: 70%;
+  text-align: center;
+}
+
+/*予約詳細画面*/
+.reserve-area {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.parson-area {
+  width: 100%;
+}
+
+.text-parson {
+  background-color: #03AAD2;
+  color: #fff;
+  text-align: center;
+}
+
+.text-parson2 {
+  text-align: center;
+}
+
+.text-parson2:nth-child(odd) {
+  background-color: #D7EEFF;
 }
 
 /* モーダル */
@@ -107,6 +177,11 @@ li {
 }
 
 /* 掲示板 */
+.post_title {
+  color: black;
+  font-weight: bold;
+}
+
 .sub_categories {
   display: none;
 }
@@ -135,6 +210,37 @@ li {
   justify-content: space-between;
 }
 
+.edit-btn {
+  display: flex;
+}
+
+.edit-modal-open {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 50px;
+  height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  padding: 0.2rem;
+  margin: 0px 3px 0px 0px;
+}
+
+.edit-delete {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  width: 50px;
+  height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  padding: 0.2rem;
+}
+
 .like_btn,
 .un_like_btn {
   cursor: pointer;
@@ -149,6 +255,25 @@ li {
   font-size: 12px;
   color: red;
 }
+
+.post-create {
+  width: 80%;
+  margin: 15% 15% 5% 0%;
+  text-align: center;
+}
+
+.post-create-a {
+  font-size: 1rem;
+  color: #fff;
+  margin: 10%;
+}
+
+.keyword {
+  border-color: #ADD8E6;
+  border-radius: 0.4rem;
+  background-color: #ECF1F6;
+}
+
 
 /* 掲示板 詳細画面 */
 .contributor {
@@ -227,7 +352,7 @@ li {
   border-radius: 5px;
   padding: 0 5px;
   border: none;
-  background: #999;
+  background: #03AAD2;
   color: #FFF;
 }
 
@@ -238,15 +363,39 @@ li {
 }
 
 /* ユーザー検索 */
+.searchTitle {
+  font-size: 1.2rem;
+  margin: 8% 0% 0% 10%;
+  color: #006699;
+}
+
+.CategoryTitle {
+  color: #006699;
+}
+
+.searchCategory {
+  display: flex;
+  flex-flow: column;
+  margin: 5% 0% 0% 10%;
+}
+
+.category {
+  width: 90px;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 1% 2%;
+}
+
 .reserve_users_area {
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
+  width: 100%;
   margin: 10px auto;
   height: 80vh;
   overflow: scroll;
   padding: 10px;
-  background: #FFF;
+  background: #ECF1F6;
   border-radius: 5px;
 }
 
@@ -257,23 +406,112 @@ li {
 .one_person {
   width: 250px;
   height: 250px;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin: 6px;
+  background: #fff;
+  padding: 10px;
+}
+
+.search-span {
+  color: #999;
+}
+
+.search-menu {
+  margin: 4px;
+}
+
+.free_word {
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 0.3rem;
+  height: 40px;
+  width: 220px;
+  margin: 10%;
+  padding: 8%;
+}
+
+.subject-select {
+  display: inline-block
 }
 
 .search_conditions span {
+  color: 006699;
   cursor: pointer;
+  margin: 8% 10%;
+}
+
+.search_conditions:after {
+  content: "";
+  position: absolute;
+  right: 120px;
+  top: 307px;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px #494949;
+  border-right: solid 2px #494949;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.search_conditions.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 308px;
 }
 
 .search_conditions_inner {
   display: none;
-  background: #FFF;
+  background: none;
+  margin: 5% 0% 0% 10%;
 }
 
 .subject_edit_btn {
-  font-size: 12px;
-  color: #0000FF;
+  font-size: 15px;
+  color: #03AAD2;
   cursor: pointer;
+}
+
+.subject_edit_btn:after {
+  content: "";
+  position: absolute;
+  left: 440px;
+  top: 280px;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px #03AAD2;
+  border-right: solid 2px #03AAD2;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.subject_edit_btn.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 282px;
 }
 
 .subject_inner {
   display: none;
+}
+
+.search_btn {
+  width: 220px;
+  border: none;
+  background-color: #03AAD2;
+  color: #fff;
+  border-radius: 0.3rem;
+  margin: 5% 10%;
+  padding: 2% 5%;
+}
+
+.reset {
+  color: #03AAD2;
+  border: none;
+  background-color: none;
+  margin: 8% 40%;
 }

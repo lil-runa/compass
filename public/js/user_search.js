@@ -1,9 +1,11 @@
 $(function () {
-  $('.search_conditions').click(function () {
-    $('.search_conditions_inner').slideToggle();
+  $('.search_conditions').on('click', function () {
+    $(this).next().slideToggle(200);
+    $(this).toggleClass('open', 200);
   });
 
-  $('.subject_edit_btn').click(function () {
-    $('.subject_inner').slideToggle();
+  $('.subject_edit_btn').on('click', function () {
+    $(this).next().slideToggle(200);
+    $(this).toggleClass('open', 200);
   });
 });
