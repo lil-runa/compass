@@ -269,9 +269,45 @@ li {
 }
 
 .keyword {
-  border-color: #ADD8E6;
-  border-radius: 0.4rem;
+  width: 60%;
+  border: thin solid #B0C4DE;
+  border-radius: 0.4rem 0 0 0.4rem;
   background-color: #ECF1F6;
+  margin: 0% 0% 0% 0%;
+}
+
+.keyword_btn {
+  width: 20%;
+  border-radius: 0 0.4rem 0.4rem 0;
+  background-color: #03AAD2;
+  color: #fff;
+  border: none;
+  margin: 0% 15% 0% 0%;
+}
+
+.main_categories:after {
+  content: "";
+  position: absolute;
+  right: 120px;
+  top: 207px;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px #494949;
+  border-right: solid 2px #494949;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.main_categories.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 308px;
+}
+
+.categories_inner {
+  display: none;
 }
 
 

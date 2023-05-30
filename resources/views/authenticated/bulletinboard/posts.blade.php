@@ -30,18 +30,21 @@
   <div class="other_area  w-25">
     <div class="">
       <div class="post-create category_btn"><a class="post-create-a" href="{{ route('post.input') }}">投稿</a></div>
-      <div class="">
+      <div class="d-flex">
         <input type="text" placeholder="キーワードを検索" name="keyword" form="postSearchRequest" class="keyword">
-        <input type="submit" value="検索" form="postSearchRequest">
+        <input type="submit" value="検索" form="postSearchRequest" class="keyword_btn">
       </div>
       <input type="submit" name="like_posts" class="category_btn" value="いいねした投稿" form="postSearchRequest">
       <input type="submit" name="my_posts" class="category_btn" value="自分の投稿" form="postSearchRequest">
+      <p>カテゴリー検索</p>
       <ul>
         @foreach($categories as $category)
         <li class="main_categories" category_id="{{ $category->id }}"><span>{{ $category->main_category }}<span></li>
+        <div class="categories_inner">
         @foreach($category->subCategories as $sub_category)
         <input type="submit" name="category_word" class="category_btn" value="{{ $sub_category->sub_category }}" form="postSearchRequest">
          @endforeach
+         </div>
         @endforeach
       </ul>
     </div>
